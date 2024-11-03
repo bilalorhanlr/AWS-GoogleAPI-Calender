@@ -1,0 +1,14 @@
+functions:
+  getAccessToken:
+    handler: handler.getAccessToken
+    events:
+      - http:
+          path: api/get-token
+          method: post
+
+  getCalendarEvents:
+    handler: handler.getCalendarEvents
+    events:
+      - http:
+          path: api/get-events/{access_token}
+          method: get
